@@ -1,0 +1,25 @@
+@import 'font.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'SF', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  max-width: 1424px;
+  margin: 0 auto;
+}

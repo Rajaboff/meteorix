@@ -1,0 +1,7 @@
+.inner-container {
+  grid-template-columns: 0.9fr 2.4fr 1.2fr;
+}
+
+.right-block {
+  grid-template-rows: auto auto 1fr;
+}

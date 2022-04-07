@@ -1,0 +1,20 @@
+.games-ul > li.active path,
+.games-ul > li.active circle {
+  fill: white;
+}
+
+.games-ul > li.active {
+  background: linear-gradient(90deg, #56C72C 0%, #5CA541 100%);
+  color: white;
+}
+
+/* -------------- */
+
+.nav-ul > li.active path,
+.nav-ul > li.active circle {
+  fill: black;
+}
+
+.nav-ul > li.active {
+  background: #F7C61A;
+}

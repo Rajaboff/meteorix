@@ -1,0 +1,54 @@
+@keyframes openBlock {
+  from {
+    bottom: 60px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 70px;
+    opacity: 1;
+  }
+}
+
+@keyframes closeBlock {
+  from {
+    bottom: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    bottom: 60px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.emoji-block > img {
+  cursor: pointer;
+}
+
+.emoji-block {
+  visibility: hidden;
+}
+
+.emoji-block.opened {
+  animation: openBlock 0.15s;
+  visibility: visible;
+}
+
+.emoji-block.closed {
+  animation: closeBlock 0.15s;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+button path {
+  transition: 0.1s;
+  fill: #3B3B47;
+}
+
+button.active path {
+    fill: #56C72C;
+}
+
