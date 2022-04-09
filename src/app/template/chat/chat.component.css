@@ -1,46 +1,11 @@
-@keyframes openBlock {
-  from {
-    bottom: 60px;
-    opacity: 0;
-  }
-
-  to {
-    bottom: 70px;
-    opacity: 1;
-  }
-}
-
-@keyframes closeBlock {
-  from {
-    bottom: 70px;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  to {
-    bottom: 60px;
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
 .emoji-block > img {
   cursor: pointer;
+  padding: 5px;
+  border-radius: 8px;
 }
 
-.emoji-block {
-  visibility: hidden;
-}
-
-.emoji-block.opened {
-  animation: openBlock 0.15s;
-  visibility: visible;
-}
-
-.emoji-block.closed {
-  animation: closeBlock 0.15s;
-  visibility: hidden;
-  pointer-events: none;
+.emoji-block > img:hover {
+  background-color: white;
 }
 
 button path {
@@ -48,7 +13,7 @@ button path {
   fill: #3B3B47;
 }
 
-button.active path {
-    fill: #56C72C;
+button.active path, button:hover path {
+    opacity: 0.5;
 }
 

@@ -1,3 +1,32 @@
-.navbar-container {
-  grid-template-columns: 0.9fr repeat(3, 0.8fr) 1.2fr;
+@media screen and (max-width: 1150px) {
+  .logo-block {
+    min-width: 215px;
+  }
+
+  .auth-block, .profile-block {
+    min-width: 300px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .auth-block, .profile-block {
+    min-width: 150px;
+  }
+
+  .profile-block > .info > span,
+  .profile-block > .btns > .history,
+  .auth-block > span,
+  .logo-block {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1, .wins-block > div > span {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }

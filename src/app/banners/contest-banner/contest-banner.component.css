@@ -1,0 +1,11 @@
+@media screen and (max-width: 1150px) {
+  .contest-banner {
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contest-banner {
+    padding: 20px;
+  }
+}

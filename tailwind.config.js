@@ -18,7 +18,10 @@ module.exports = {
             150: '#E5E8F6',
             200: '#C4C8E3',
             250: '#A5AEC8',
-            300: '#9C9FAD'
+            300: '#9C9FAD',
+            350: '#BCBFD3',
+            400: '#868699',
+            450: '#878799',
           },
           black: '#131319',
           success: '#56C72CD9',
@@ -43,6 +46,14 @@ module.exports = {
           blue: {
             light: '#4F9AF2B2',
             dark: '#5454F5'
+          },
+          blue2: {
+            light: '#469AFE',
+            dark: '#5377F5'
+          },
+          purple: {
+            light: '#9759FD',
+            dark: '#7353F5'
           }
         }
       },

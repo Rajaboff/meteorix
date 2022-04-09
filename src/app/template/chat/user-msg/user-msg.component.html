@@ -1,0 +1,19 @@
+<div class="user-msg-container relative w-full flex items-start mb-[10px]">
+    <div class="image-mask min-w-[40px] min-h-[40px] rounded-6 bg-main-grey-50 bg-cover bg-center" [style.background]="setImg()"></div>
+
+    <div class="info-texts w-full px-[10px] leading-none">
+        <h1 class="username leading-none text-[16px] font-[500] mb-[5px] mt-[2px] inline-block" [class]="nameColor">{{ username }}</h1>
+        <p class="msg leading-none text-[16px] font-[400]">{{ msg }}</p>
+    </div>
+
+    <button class="dottes-btn py-[8px] mx-[10px]" (click)="settings = true">
+        <svg width="24" height="6" viewBox="0 0 24 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00012 3C6.00012 4.65685 4.65698 6 3.00012 6C1.34327 6 0.00012207 4.65685 0.00012207 3C0.00012207 1.34315 1.34327 0 3.00012 0C4.65698 0 6.00012 1.34315 6.00012 3ZM15.0001 3C15.0001 4.65685 13.657 6 12.0001 6C10.3433 6 9.00012 4.65685 9.00012 3C9.00012 1.34315 10.3433 0 12.0001 0C13.657 0 15.0001 1.34315 15.0001 3ZM21.0001 6C22.657 6 24.0001 4.65685 24.0001 3C24.0001 1.34315 22.657 0 21.0001 0C19.3433 0 18.0001 1.34315 18.0001 3C18.0001 4.65685 19.3433 6 21.0001 6Z" fill="#D6DAED"/>
+        </svg>
+    </button>
+
+    <div class="setting-block absolute z-10 right-0 top-0 py-[14px] px-[26px] rounded-10 bg-main-grey-default" *ngIf="settings" (mouseleave)="settings = false">
+      <p class="cursor-pointer text-[14px] font-[400] text-main-grey-350 hover:text-main-grey-400 mb-[5px]" (click)="settings = false">Жалоба</p>
+      <p class="cursor-pointer text-[14px] font-[400] text-main-grey-350 hover:text-main-grey-400" (click)="settings = false">Удалить</p>
+    </div>
+</div>

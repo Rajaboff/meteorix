@@ -1,3 +1,11 @@
+* {
+  transition: none;
+}
+
+.mobile-logo {
+  display: none;
+}
+
 .games-ul > li.active path,
 .games-ul > li.active circle {
   fill: white;
@@ -17,4 +25,25 @@
 
 .nav-ul > li.active {
   background: #F7C61A;
+}
+
+@media screen and (max-width: 1150px) {
+  .games-ul > li > .resoure,
+  .nav-ul > li > svg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mobile-logo {
+    display: flex;
+  }
+
+  .games-ul > li > .resoure {
+    display: flex;
+  }
+
+  .nav-ul > li > svg {
+    display: block;
+  }
 }

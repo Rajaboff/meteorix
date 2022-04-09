@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +10,10 @@ export class NavbarComponent implements OnInit {
 
   logged = true;
 
-  constructor() { }
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit(): void {
   }
 
+  navigating = (url: string) => this.navigationService.navigateByUrl(url);
 }

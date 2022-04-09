@@ -1,0 +1,29 @@
+h1 {
+  color: #878799;
+}
+
+h1.g-purple {
+    background: linear-gradient(90deg, #8585FF 0%, #F156FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h1.g-green {
+  background: linear-gradient(90deg, #8785FF 0%, #41D53E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h1.blue {
+  color: #3B7CDE;
+}
+
+h1.orange {
+  color: #DA6E32;
+}
+
+.dottes-btn:hover path {
+  fill: #A5AEC8;
+}

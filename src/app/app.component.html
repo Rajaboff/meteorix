@@ -1,14 +1,32 @@
-<div class="container flex flex-col w-full h-full bg-white">
+<div class="main-container flex flex-col w-full h-full bg-white mx-auto">
     <app-navbar></app-navbar>
 
-    <div class="inner-container grid w-full h-full">
-        <app-menu></app-menu>
-        <app-content></app-content>
-        <div class="right-block grid grid-cols-1">
-          <app-balance></app-balance>
-          <app-contest-banner></app-contest-banner>
-          <app-chat></app-chat>
+    <div class="inner-container flex w-full h-full min-h-0">
+        <div class="menu min-w-[255px] min-h-0 z-10 overflow-y-auto bg-white" [ngClass]="{'opened': menuTab}">
+            <app-menu></app-menu>
         </div>
-        
+
+        <div (click)="menuOpen()" class="menu-toggle z-10 fixed bottom-0 left-0 bg-white p-[15px] border-t border-r border-main-grey-150"
+        [ngClass]="{'opened': menuTab}">
+          <img src="/assets/svgs/menu.svg">
+        </div>
+
+        <div class="content w-full overflow-y-auto">
+            <app-content></app-content>
+        </div>
+
+        <div class="right-block grid z-10 grid-cols-1 min-w-[375px] border-l border-main-grey-150 overflow-y-auto bg-white" [ngClass]="{'opened': chatTab}">
+            <app-balance></app-balance>
+            <app-contest-banner></app-contest-banner>
+            <app-chat></app-chat>
+        </div>
+
+        <div (click)="chatOpen()" class="chat-toggle z-10 fixed bottom-0 right-0 bg-white p-[15px] border-t border-l border-main-grey-150"
+        [ngClass]="{'opened': chatTab}">
+          <img src="/assets/svgs/chat.svg">
+        </div>
+
+        <div class="tab-bg top-0 left-0 fixed w-full h-full z-0" *ngIf="menuTab || chatTab" (click)="menuTab = false; chatTab = false"></div>
+
     </div>
 </div>
