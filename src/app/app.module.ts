@@ -28,6 +28,8 @@ import { LivePageComponent } from './pages/live-page/live-page.component';
 import { SlotsPageComponent } from './pages/slots-page/slots-page.component';
 import { TotalBetBlockComponent } from './template/total-bet-block/total-bet-block.component';
 import { SlidePlayersBlockComponent } from './template/slide-players-block/slide-players-block.component';
+import { PlayersTableBlockComponent } from './template/players-table-block/players-table-block.component';
+import { BetColumnComponent } from './template/players-table-block/bet-column/bet-column.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { SlidePlayersBlockComponent } from './template/slide-players-block/slide
     LivePageComponent,
     SlotsPageComponent,
     TotalBetBlockComponent,
-    SlidePlayersBlockComponent
+    SlidePlayersBlockComponent,
+    PlayersTableBlockComponent,
+    BetColumnComponent
   ],
   imports: [
     BrowserModule,

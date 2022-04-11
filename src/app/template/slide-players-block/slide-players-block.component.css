@@ -1,0 +1,8 @@
+.middle-line{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.images {
+  transition: left 3s;
+}

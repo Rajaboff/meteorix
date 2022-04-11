@@ -1,0 +1,15 @@
+<div class="table-block-container mt-[20px]" *ngIf="players.length > 0">
+  <!-- Procentage Block -->
+  <div class="procentage-block w-full rounded-10 bg-main-grey-50 flex justify-center p-[5px]">
+    <div *ngFor="let player of players" class="player-procentage w-[60px] h-[60px] rounded-6 bg-white mx-[3px] relative bg-no-repeat bg-cover bg-center" [style.backgroundImage]="setImgUrl(player.imgPath)">
+      <div class="absolute bottom-0 w-full rounded-6 p-[3px]">
+        <p class="text-center text-[12px] text-white">{{ player.bet / playerData.totalBetSum * 100 | number:'1.0-0' }}%</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Columns Block -->
+  <div class="table-block w-full rounded-10 bg-main-grey-50 p-[10px] mt-[10px] grid grid-cols-1 gap-[10px]" [ngClass]="{'showed': players.length > 0}">
+    <app-bet-column *ngFor="let player of players" [player]="player"></app-bet-column>
+  </div>
+</div>

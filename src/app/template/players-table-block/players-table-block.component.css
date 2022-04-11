@@ -1,0 +1,4 @@
+.player-procentage>div {
+    background: rgba(73, 84, 112, 0.7);
+    backdrop-filter: blur(4px);
+}

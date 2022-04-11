@@ -1,34 +1,34 @@
-<div class="total-bet-container w-full">
+<div class="total-bet-container w-full" *ngIf="seconds > 0">
     <div class="total-info flex">
-        <div class="bets-sum-block flex justify-center items-center relative w-full overflow-hidden rounded-10 bg-main-grey-default p-[25px]">
-            <h1 class="z-10 text-[24px] font-[700]">150,84
-                <span class="text-main-grey-250">из</span>
-                500</h1>
-            <div class="back-colorize absolute h-full w-[25%] z-0 left-0 bg-gradient-to-r from-gradient-orange-dark to-gradient-orange-light"></div>
+        <div class="bets-sum-block flex justify-center items-center relative w-full overflow-hidden rounded-10 bg-main-grey-default px-[25px] py-[22px]">
+            <h1 class="z-10 text-[24px] font-[700]">{{playerData.totalBetSum}}
+                <span class="opacity-40">из</span>
+                <span> {{ maxBet }}</span></h1>
+            <div [style.width]="avarageNum(playerData.totalBetSum, maxBet)" class="back-colorize absolute h-full z-0 left-0 bg-gradient-to-r from-gradient-orange-dark to-gradient-orange-light"></div>
         </div>
         <div class="minutes-block rounded-10 bg-main-grey-default min-w-[82px] ml-[14px] flex justify-center items-center">
-            <span class="text-[36px] font-[700] text-main-error">0</span>
+            <span class="text-[36px] font-[700] text-main-error">{{ minutes }}</span>
         </div>
         <span class="text-[36px] font-[700] text-main-error flex items-center mx-[5px]">:</span>
         <div class="seconds-block rounded-10 bg-main-grey-default min-w-[82px] flex justify-center items-center">
-            <span class="text-[36px] font-[700] text-main-error">58</span>
+            <span class="text-[36px] font-[700] text-main-error">{{ seconds }}</span>
         </div>
     </div>
 
-    <div class="bet-info flex justify-between items-center rounded-10 border border-r-main-grey-150 p-[20px] mt-[10px]">
+    <div class="bet-info flex justify-between items-center rounded-10 border border-r-main-grey-150 pl-[20px] pr-[5px] py-[5px] mt-[10px]">
         <div class="limits flex items-center">
             <span class="text-[18px] font-[600] text-main-grey-250 mr-[10px] mb-[2px]">Ставка:</span>
             <span class="flex leading-none items-center text-[18px] font-[600]"><img class="w-[14px] mr-[10px]" src="/assets/svgs/coin.svg">
-                1</span>
+              {{ minBet }}</span>
             <div class="line w-[40px] h-[2px] rounded-10 bg-main-grey-200 mx-[10px]"></div>
             <span class="flex leading-none items-center text-[18px] font-[600]"><img class="w-[14px] mr-[10px]" src="/assets/svgs/coin.svg">
-                500</span>
+              {{ maxBet }}</span>
 
             <div class="circle w-[6px] h-[6px] rounded-10 bg-main-grey-default mx-[20px]"></div>
 
             <span class="text-[18px] font-[600] text-main-grey-250 mr-[10px] mb-[2px]">Банк:</span>
             <span class="flex leading-none items-center text-[18px] font-[600]"><img class="w-[14px] mr-[10px]" src="/assets/svgs/coin.svg">
-                500</span>
+              {{ maxBet }}</span>
         </div>
 
         <div class="betting flex">
@@ -58,3 +58,5 @@
         </div>
     </div>
 </div>
+
+<app-slide-players-block *ngIf="seconds <= 0 && minutes <= 0"></app-slide-players-block>

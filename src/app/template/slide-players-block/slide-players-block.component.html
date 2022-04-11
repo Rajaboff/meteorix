@@ -1,1 +1,34 @@
-<p>slide-players-block works!</p>
+<div class="slide-players-container">
+    <div #slider class="slider w-full relative rounded-10 bg-main-grey-50 h-[80px] overflow-hidden">
+        <div class="middle-line absolute h-full w-[4px] bg-main-yellow z-10"></div>
+
+        <div #imgsCont class="images flex absolute left-0 w-full h-full">
+          <div class="player-image min-h-[80px] min-w-[80px] bg-cover bg-center"
+          *ngFor="let img of images" [style.backgroundImage]="setUrl(img)"></div>
+        </div>
+    </div>
+
+    <div class="bet-info flex justify-between items-center rounded-10 border border-r-main-grey-150 pl-[20px] pr-[5px] py-[5px] mt-[10px]">
+        <div class="limits flex items-center">
+            <span class="text-[18px] font-[600] text-main-grey-250 mr-[10px] mb-[2px]">Банк:</span>
+            <span class="flex leading-none items-center text-[18px] font-[600]"><img class="w-[14px] mr-[10px]" src="/assets/svgs/coin.svg">
+                500</span>
+
+            <div class="circle w-[6px] h-[6px] rounded-10 bg-main-grey-default mx-[20px]"></div>
+
+            <span class="text-[18px] font-[600] text-main-grey-250 mr-[10px] mb-[2px]">Билет:</span>
+            <span class="flex leading-none items-center text-[14px] font-[600] text-main-grey-250">
+                <img class="w-[17px] mr-[10px]" src="/assets/svgs/ticket.svg">
+                {{ winTicket }}</span>
+
+            <div class="circle w-[6px] h-[6px] rounded-10 bg-main-grey-default mx-[20px]"></div>
+
+            <span class="text-[18px] font-[600] text-main-grey-250 mr-[10px] mb-[2px]">Шанс:</span>
+            <span class="flex leading-none items-center text-[14px] font-[600]">{{ (winner.bet || 0) / totalBet * 100 | number: '1.0-0'}}%</span>
+        </div>
+
+        <div class="winner p-[5px] bg-[#F6AF4333] rounded-10 flex items-center text-[16px] font-[500]">
+          <div class="image-mask w-[40px] h-[40px] rounded-6 bg-center bg-cover bg-white" [style.backgroundImage]="setUrl(winner.imgPath)"></div>
+          <h1 class="ml-[10px] mr-[5px]">{{ winner.name || '???' }}</h1>
+        </div>
+    </div>
