@@ -1,0 +1,53 @@
+button:hover {
+  background-color: #D3DAEE;
+}
+
+input:focus {
+  transition: 0.3s;
+  color: black;
+}
+
+@media screen and (max-width: 1300px) {
+  .btns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  input {
+    width: 130px;
+  }
+
+  .btns > button:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+    input {
+      width: 250px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+  input {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .dice-input-container {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  input {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  input {
+    width: 125px;
+  }
+}

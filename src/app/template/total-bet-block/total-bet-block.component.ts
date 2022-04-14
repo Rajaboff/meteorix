@@ -12,13 +12,15 @@ export class TotalBetBlockComponent implements OnInit {
   @Input() seconds: number = 0;
   @Input() maxBet: number = 0;
   @Input() minBet: number = 0;
+  @Input() totalBet: number = 0;
 
   @Input() players: PlayersClassic[] = [];
 
   minutes: number = 0;
-  
-  constructor(public playerData: PlayersDataService) {
-  }
+
+  betSum: number = 0;
+
+  constructor() {}
 
   ngOnInit(): void {
     this.timing();
@@ -27,10 +29,6 @@ export class TotalBetBlockComponent implements OnInit {
   timing() {
     this.minutes = Math.floor(this.seconds / 60);
     this.seconds -= this.minutes * 60;
-
-    console.log(this.minutes, this.seconds);
-    
-
     let t = setInterval(() => {
       
       if(this.seconds <= 0 && this.minutes > 0) {
@@ -44,6 +42,17 @@ export class TotalBetBlockComponent implements OnInit {
 
   avarageNum(sum: number, maxSum: number) {
     return (sum / maxSum * 100) + '%';
+  }
+
+  betArrow(t: string) {
+    if(t === 'add') {
+      this.betSum++;
+    }
+    else {
+      if(this.betSum !== 0){
+        this.betSum--;
+      }
+    }
   }
 
 }

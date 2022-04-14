@@ -1,0 +1,86 @@
+.tag-btns > button {
+  border: 2px solid white;
+  white-space: nowrap;
+}
+
+.tag-btns > button.active {
+  background-color: #F7C61A;
+  border: 2px solid #F7C61A;
+}
+
+.tag-btns > button.active:hover {
+  border: 2px solid #F7C61A;
+}
+
+.tag-btns > button:hover {
+  border: 2px solid #F6AF43;
+}
+
+.game-block {
+  background-image: url('/assets/imgs/slots/1.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.game-block:nth-child(2) {
+  background-image: url('/assets/imgs/slots/2.png');
+}
+.game-block:nth-child(3) {
+  background-image: url('/assets/imgs/slots/3.png');
+}
+.game-block:nth-child(4) {
+  background-image: url('/assets/imgs/slots/4.png');
+}
+
+.hover-btn {
+  display: none;
+}
+
+.game-block:hover > .hover-btn {
+  backdrop-filter: blur(4px);
+  display: flex;
+}
+
+@media screen and (max-width: 1250px) {
+  .games {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .games {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .games {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .games {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tags {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tags > h1 {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .games {
+    grid-template-columns: 1fr;
+  }
+
+  .games > .game-block {
+    height: 200px;
+  }
+}

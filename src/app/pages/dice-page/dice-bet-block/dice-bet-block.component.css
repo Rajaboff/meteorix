@@ -1,0 +1,57 @@
+.btns button:hover {
+  background-color: #56C72C;
+  color: white;
+}
+
+.rand-numbers.win {
+  color: #56C72C;
+}
+
+.rand-numbers.lose {
+  color: #BCBFD3;
+}
+
+.hash {
+  inline-size: 400px;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 1300px) {
+  .hash {
+    inline-size: 250px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hash {
+    inline-size: 500px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hash {
+    inline-size: 400px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .dice-bet-container {
+    flex-direction: column;
+  }
+
+  .inputs {
+    justify-content: center;
+  }
+
+  .hash {
+    text-align: center;
+    inline-size: 80%;
+    margin: 30px auto;
+  }
+} 
+
+@media screen and (max-width: 450px) {
+  .hash {
+    inline-size: 100%;
+  }
+}

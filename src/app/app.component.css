@@ -6,6 +6,11 @@
   display: none;
 }
 
+.tab-bg {
+  background: rgba(35, 49, 65, 0.5);
+  backdrop-filter: blur(5px);
+}
+
 @media screen and (max-width: 1150px) {
   .menu {
     min-width: 215px;

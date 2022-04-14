@@ -1,0 +1,67 @@
+<app-modal-template>
+  <div class="deposit-container w-[408px]">
+    <h1 class="text-center text-[18px] font-[600] p-[20px]">Пополнение баланса</h1>
+
+    <div class="line w-full h-[1px] bg-main-grey-150"></div>
+    
+    <div class="pay-systems grid grid-cols-3 grid-rows-3 gap-[10px] m-[20px]">
+      <div class="pay-system active w-[116px] h-[90px] p-[10px] flex flex-col items-center justify-between rounded-10 bg-main-grey-default">
+        <img class="w-[40px]" src="/assets/svgs/payments/qiwi.svg">
+        <h3 class="text-[16px] font-[500]">Qiwi</h3>
+      </div>
+      <div class="pay-system w-[116px] h-[90px] p-[10px] flex flex-col items-center justify-between rounded-10 bg-main-grey-default">
+        <img class="w-[40px] mt-[5px]" src="/assets/svgs/payments/youmoney.svg">
+        <h3 class="text-[16px] font-[500]">Юмани</h3>
+      </div>
+      <div class="pay-system w-[116px] h-[90px] p-[10px] flex flex-col items-center justify-between rounded-10 bg-main-grey-default">
+        <img class="w-[40px]" src="/assets/svgs/payments/litecoin.svg">
+        <h3 class="text-[16px] font-[500]">Lite</h3>
+      </div>
+      <div class="pay-system w-[116px] h-[90px] p-[10px] flex flex-col items-center justify-between rounded-10 bg-main-grey-default">
+        <img class="w-[26px]" src="/assets/svgs/payments/alpha.svg">
+        <h3 class="text-[16px] font-[500]">Альфа</h3>
+      </div>
+      <div class="pay-system w-[116px] h-[90px] p-[10px] flex flex-col items-center justify-between rounded-10 bg-main-grey-default">
+        <img class="w-[37px]" src="/assets/svgs/payments/etherium.svg">
+        <h3 class="text-[16px] font-[500]">ETH</h3>
+      </div>
+      <div class="pay-system w-[116px] h-[90px] p-[10px] flex flex-col items-center justify-between rounded-10 bg-main-grey-default">
+        <img class="w-[40px]" src="/assets/svgs/payments/sber.svg">
+        <h3 class="text-[16px] font-[500]">Сбер</h3>
+      </div>
+      <div class="pay-system w-[116px] h-[90px] p-[10px] flex flex-col items-center justify-between rounded-10 bg-main-grey-default">
+        <img class="w-[40px]" src="/assets/svgs/payments/bitcoin.svg">
+        <h3 class="text-[16px] font-[500]">BTC</h3>
+      </div>
+      <div class="pay-system w-[116px] h-[90px] p-[10px] flex flex-col items-center justify-between rounded-10 bg-main-grey-default">
+        <img class="w-[34px]" src="/assets/svgs/payments/paypal.svg">
+        <h3 class="text-[16px] font-[500]">PayPal</h3>
+      </div>
+      <div class="pay-system w-[116px] h-[90px] p-[10px] flex flex-col items-center justify-between rounded-10 bg-main-grey-default">
+        <img class="w-[68px] mt-[11px]" src="/assets/svgs/payments/visa.svg">
+        <h3 class="text-[16px] font-[500]">Карта</h3>
+      </div>
+    </div>
+
+    <div class="line w-full h-[1px] bg-main-grey-150"></div>
+
+    <div class="promo-block m-[20px]">
+      <div class="promo-code flex justify-between mb-[10px]">
+        <input [(ngModel)]="promocode" class="px-[18px] py-[17px] bg-main-grey-default rounded-8 w-full text-[18px] font-[600] placeholder:text-main-grey-250" type="text" placeholder="Промо-код">
+        <button (click)="activateCode()" class="ml-[10px] bg-main-yellow px-[18px] py-[17px] rounded-8 text-[16px] font-[500] text-white min-w-[124px]">Применить</button>
+      </div>
+
+      <div class="activate-promo-info mb-[20px] rounded-8 bg-[#F37F5C] p-[11px]" [ngClass]="{'activated': promocodeActivated}" *ngIf="promocodeInfo">
+        <p class="text-center text-[14px] text-white">{{ promocodeInfo }}</p>
+      </div>
+    </div>   
+    
+    <div class="line w-full h-[1px] bg-main-grey-150"></div>
+
+    <div class="deposit-block relative flex justify-between m-[20px]">
+      <img class="absolute top-[22px] left-[17px]" src="/assets/svgs/coin.svg">
+      <input class="px-[18px] py-[17px] bg-main-grey-default rounded-8 w-full text-[18px] font-[600] placeholder:text-main-grey-250 pl-[48px]" type="text" placeholder="0">
+      <button class="ml-[10px] bg-main-green-default px-[18px] py-[17px] rounded-8 text-[16px] font-[500] text-white min-w-[124px]">Пополнить</button>
+    </div>
+  </div>
+</app-modal-template>

@@ -6,6 +6,10 @@
   display: none;
 }
 
+.nav-ul > li:hover, .games-ul > li:hover {
+  background-color: #EAEEF980;
+}
+
 .games-ul > li.active path,
 .games-ul > li.active circle {
   fill: white;

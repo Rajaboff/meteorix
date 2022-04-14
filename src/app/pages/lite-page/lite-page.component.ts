@@ -13,12 +13,12 @@ export class LitePageComponent implements OnInit {
 
   testPlayersData: PlayersClassic[] = []
 
-  testRandomTime = 0;
-
   bets = 0;
 
   minTicket: number = 1;
   maxTicket: number = 0;
+
+  totalBet: number = 0;
 
   constructor(private playersData: PlayersDataService) {
     this.testPlayersData = playersData.testPlayersData;
@@ -32,22 +32,21 @@ export class LitePageComponent implements OnInit {
     let player = this.testPlayersData[this.bets];
 
     if(player){
-      this.testRandomTime = Math.ceil(Math.random() * 2000);
+      let testRandomTime = Math.ceil(Math.random() * 2000);
       setTimeout(() => {
         player.ticketMin = this.minTicket;
         this.maxTicket += player.bet * 100;
         player.ticketMax = this.maxTicket;
 
         this.players.push(player);
-        this.playersData.totalBetSum += player.bet;
-        console.log(this.playersData.totalBetSum);
+        this.totalBet += player.bet;
         
         this.bets++;
 
         this.minTicket = this.maxTicket + 1;
 
         this.testTiming();
-      }, this.testRandomTime);
+      }, testRandomTime);
     }
   }
 

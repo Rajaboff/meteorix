@@ -1,0 +1,23 @@
+.modal-bg {
+  background: rgba(35, 49, 65, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (max-width: 510px) {
+  .modal-content {
+    transform: scale(0.8) translateX(-62.5%) translateY(-65%);
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  .modal-content {
+    transform: scale(0.7) translateX(-71%) translateY(-70%);
+  }
+}

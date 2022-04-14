@@ -10,9 +10,9 @@ import { PlayersDataService } from 'src/app/services/players-data.service';
 export class PlayersTableBlockComponent implements OnInit {
 
   @Input() players: PlayersClassic[] = []
+  @Input() totalBet: number = 0;
 
-  constructor(public playerData: PlayersDataService) {
-  }
+  constructor() {}
 
   ngOnInit(): void {
     

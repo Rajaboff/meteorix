@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ModalsService } from 'src/app/services/modals.service';
 
 @Component({
   selector: 'app-balance',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BalanceComponent implements OnInit {
 
-  constructor() { }
+  @Output() close = new EventEmitter();
+
+  constructor(public modalsService: ModalsService) { }
 
   ngOnInit(): void {
   }

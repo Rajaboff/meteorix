@@ -1,0 +1,18 @@
+@media screen and (max-width: 500px) {
+  .tickets {
+    display: none;
+  }
+
+  
+  .bet-column {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .username {
+    font-size: 14px;
+  }
+
+}

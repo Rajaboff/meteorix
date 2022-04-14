@@ -1,10 +1,10 @@
 <div class="menu-container h-full border-r border-main-grey-150 flex flex-col">
-    <div class="mobile-logo flex justify-center items-center p-[10px] border-b border-main-grey-150">
+    <div class="mobile-logo flex justify-center items-center p-[10px] border-b border-main-grey-150" (click)="close.emit(false)">
       <img class="pb-[5px]" src="/assets/svgs/logo.svg">
     </div>
 
     <div class="games-block border-b border-main-grey-150">
-        <ul class="games-ul">
+        <ul class="games-ul" (click)="close.emit(false)">
             <li routerLink="lite" routerLinkActive="active" class="lite-game border-b cursor-pointer border-main-grey-150 flex justify-between items-center p-[20px]">
                 <div class="title flex items-center">
                     <svg width="26" height="28" viewbox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +101,7 @@
     </div>
 
     <div class="nav-block">
-        <ul class="nav-ul">
+        <ul class="nav-ul" (click)="close.emit(false)">
             <li class="bonus-nav cursor-pointer py-[15px] px-[20px] flex items-center justify-between" routerLink="/bonuses" routerLinkActive="active">
                 <h1 class="text-[16px] font-[500] leading-none">Бонусы</h1>
                 <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,14 +109,14 @@
                 </svg>
             </li>
 
-            <li class="chest-nav cursor-pointer py-[15px] px-[20px] flex items-center justify-between" routerLink="/chests" routerLinkActive="active">
+            <li (click)="modalsService.modalToggle('chests', true)" class="chest-nav cursor-pointer py-[15px] px-[20px] flex items-center justify-between">
                 <h1 class="text-[16px] font-[500] leading-none">Сундуки</h1>
                 <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4588 3.95198C14.4588 4.38398 14.2275 4.77598 13.8607 4.97598L12.4745 5.72715L12.475 5.72798L11.2947 6.35998L11.2937 6.3594L11.2926 6.35997L8.84425 7.68796C8.58107 7.83196 8.29396 7.90396 7.99888 7.90396C7.7038 7.90396 7.41669 7.83196 7.15351 7.68796L2.13714 4.97598C1.77028 4.77598 1.539 4.38398 1.539 3.95198C1.539 3.51998 1.77028 3.12798 2.13714 2.92799L3.70825 2.07999L4.96036 1.39999L7.15351 0.215999C7.67987 -0.0719996 8.31789 -0.0719996 8.84425 0.215999L13.8607 2.92799C14.2275 3.12798 14.4588 3.51998 14.4588 3.95198ZM6.32434 8.63207L1.65884 6.29611C1.29996 6.11211 0.885248 6.13611 0.542314 6.34411C0.19938 6.55208 0 6.92008 0 7.32007V11.7441C0 12.512 0.422686 13.2 1.10855 13.544L5.77405 15.88C5.93355 15.96 6.10901 16 6.28446 16C6.49186 16 6.69921 15.944 6.88264 15.824C7.22557 15.616 7.42487 15.248 7.42487 14.848V10.4241C7.43285 9.66406 7.01016 8.97607 6.32434 8.63207ZM16 11.7435V7.31954C16 6.91954 15.7926 6.55155 15.4577 6.34358C15.1147 6.12758 14.7 6.11158 14.3411 6.29558L12.5866 7.17554L12.5859 7.17591V7.175L11.3896 7.775V7.7759L9.67564 8.63154C8.98978 8.97553 8.56709 9.66353 8.56709 10.4315V14.8475C8.56709 15.2475 8.77444 15.6155 9.1094 15.8235C9.30081 15.9435 9.50816 15.9995 9.71552 15.9995C9.89097 15.9995 10.0664 15.9595 10.2259 15.8795L14.8914 13.5355C15.5773 13.1915 16 12.5035 16 11.7435Z" fill="#F7C61A"/>
                 </svg>
             </li>
 
-            <li class="tournament-nav cursor-pointer py-[15px] px-[20px] flex items-center justify-between" routerLink="/tournaments" routerLinkActive="active">
+            <li (click)="modalsService.modalToggle('tournaments', true)" class="tournament-nav cursor-pointer py-[15px] px-[20px] flex items-center justify-between">
                 <h1 class="text-[16px] font-[500] leading-none">Турниры</h1>
                 <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7325 6.81568C14.3539 7.18367 13.8765 7.51165 13.3333 7.71164C12.4774 9.75955 10.4198 11.1995 8 11.1995C5.58025 11.1995 3.52263 9.75955 2.66667 7.71164C2.12346 7.51165 1.64609 7.18367 1.26749 6.81568C0.502058 5.99172 0 5.00777 0 3.85582C0 2.70387 0.930041 1.79992 2.11523 1.79992H2.57613C3.11111 0.735966 4.23045 0 5.53086 0H10.4691C11.7695 0 12.8889 0.735966 13.4239 1.79992H13.8848C15.07 1.79992 16 2.70387 16 3.85582C16 5.00777 15.4979 5.99172 14.7325 6.81568ZM9.82716 5.76773L10.3374 5.15976C10.6584 4.79178 10.5185 4.3838 10.0412 4.2638L9.25926 4.07181C9.1358 4.03981 8.98765 3.92782 8.92181 3.82382L8.4856 3.16785C8.21399 2.75987 7.78601 2.75987 7.5144 3.16785L7.07819 3.82382C7.01235 3.92782 6.8642 4.03981 6.74074 4.07181L5.95885 4.2638C5.48148 4.3838 5.34156 4.79178 5.66255 5.15976L6.17284 5.76773C6.25514 5.85573 6.31276 6.03172 6.30453 6.15171L6.25514 6.93568C6.22222 7.41566 6.57613 7.66364 7.03704 7.48765L7.78601 7.19967C7.90123 7.15967 8.09877 7.15967 8.21399 7.19967L8.96296 7.48765C9.42387 7.66364 9.77778 7.41566 9.74485 6.93568L9.69547 6.15171C9.68724 6.03172 9.74486 5.85573 9.82716 5.76773ZM5.53147 13.0001H7.38332V11.1682C7.58909 11.1922 7.79485 11.2002 8.00061 11.2002C8.20637 11.2002 8.41213 11.1922 8.61789 11.1682V13.0001H10.4697C11.3751 13.0001 12.1158 13.7201 12.1158 14.6001V14.8001H12.9389C13.2763 14.8001 13.5562 15.072 13.5562 15.4C13.5562 15.728 13.2763 16 12.9389 16H3.06234C2.72489 16 2.44505 15.728 2.44505 15.4C2.44505 15.072 2.72489 14.8001 3.06234 14.8001H3.88538V14.6001C3.88538 13.7201 4.62612 13.0001 5.53147 13.0001Z" fill="#925FFF"/>
@@ -133,7 +133,7 @@
     </div>
 
     <div class="social-block flex flex-col justify-end h-full">
-        <ul class="social-ul">
+        <ul class="social-ul" (click)="close.emit(false)">
             <li class="vk flex items-center cursor-pointer py-[17px] px-[20px] border-t border-main-grey-150">
                 <svg width="55" height="19" viewbox="0 0 36 19" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: scale(0.85)">
                     <path d="M35.1746 1.28667C35.4261 0.544363 35.1746 0 33.9853 0H30.0454C29.043 0 28.5849 0.47093 28.3333 0.988154C28.3333 0.988154 26.3302 5.32868 23.4916 8.14308C22.5754 8.96202 22.1568 9.22064 21.6574 9.22064C21.4076 9.22064 21.0447 8.96202 21.0447 8.21971V1.28667C21.0447 0.3959 20.7555 0 19.9201 0H13.7292C13.104 0 12.7267 0.411864 12.7267 0.804571C12.7267 1.64745 14.146 1.84221 14.2915 4.21761V9.37069C14.2915 10.4993 14.0634 10.7053 13.5603 10.7053C12.2255 10.7053 8.97734 6.34877 7.04965 1.3617C6.67417 0.392707 6.2951 0.00159702 5.28903 0.00159702H1.351C0.224569 0.00159702 0 0.472526 0 0.98975C0 1.91884 1.33483 6.51638 6.21785 12.597C9.47319 16.7491 14.0562 19 18.2314 19C20.7339 19 21.0429 18.5003 21.0429 17.6383V14.4998C21.0429 13.5005 21.2819 13.2994 22.0742 13.2994C22.6562 13.2994 23.6587 13.5612 25.996 15.5614C28.6657 17.9336 29.1076 18.9984 30.6078 18.9984H34.5458C35.6704 18.9984 36.2328 18.4987 35.9094 17.5122C35.5555 16.5304 34.2799 15.1017 32.5876 13.4111C31.6677 12.4469 30.2934 11.4093 29.8748 10.8904C29.2909 10.2216 29.4598 9.92623 29.8748 9.33238C29.8766 9.33398 34.6751 3.32843 35.1746 1.28667Z" fill="#2F82FF"/>

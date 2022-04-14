@@ -3,7 +3,7 @@
 
     <div class="inner-container flex w-full h-full min-h-0">
         <div class="menu min-w-[255px] min-h-0 z-10 overflow-y-auto bg-white" [ngClass]="{'opened': menuTab}">
-            <app-menu></app-menu>
+            <app-menu (close)="menuTab = $event"></app-menu>
         </div>
 
         <div (click)="menuOpen()" class="menu-toggle z-10 fixed bottom-0 left-0 bg-white p-[15px] border-t border-r border-main-grey-150"
@@ -16,7 +16,7 @@
         </div>
 
         <div class="right-block grid z-10 grid-cols-1 min-w-[375px] border-l border-main-grey-150 overflow-y-auto bg-white" [ngClass]="{'opened': chatTab}">
-            <app-balance></app-balance>
+            <app-balance (close)="chatTab = $event"></app-balance>
             <app-contest-banner></app-contest-banner>
             <app-chat></app-chat>
         </div>
@@ -26,7 +26,12 @@
           <img src="/assets/svgs/chat.svg">
         </div>
 
-        <div class="tab-bg top-0 left-0 fixed w-full h-full z-0" *ngIf="menuTab || chatTab" (click)="menuTab = false; chatTab = false"></div>
-
+        <div class="tab-bg top-0 left-0 fixed w-full h-full z-[15]" *ngIf="menuTab || chatTab" (click)="menuTab = false; chatTab = false"></div>
     </div>
 </div>
+
+
+<app-modal-deposit *ngIf="modalsService.modals.deposit"></app-modal-deposit>
+<app-modal-withdraw *ngIf="modalsService.modals.withdraw"></app-modal-withdraw>
+<app-modal-chests *ngIf="modalsService.modals.chests"></app-modal-chests>
+<app-modal-tournaments *ngIf="modalsService.modals.tournaments"></app-modal-tournaments>

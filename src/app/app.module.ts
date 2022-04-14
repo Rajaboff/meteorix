@@ -12,8 +12,6 @@ import { ContestBannerComponent } from './banners/contest-banner/contest-banner.
 import { UserMsgComponent } from './template/chat/user-msg/user-msg.component';
 import { RefSystemPageComponent } from './pages/ref-system-page/ref-system-page.component';
 import { BonusPageComponent } from './pages/bonus-page/bonus-page.component';
-import { ChestsPageComponent } from './pages/chests-page/chests-page.component';
-import { TournamentPageComponent } from './pages/tournament-page/tournament-page.component';
 import { RefLinkBlockComponent } from './pages/ref-system-page/ref-link-block/ref-link-block.component';
 import { RefTableComponent } from './pages/ref-system-page/ref-table/ref-table.component';
 import { AgreementPageComponent } from './pages/agreement-page/agreement-page.component';
@@ -30,6 +28,17 @@ import { TotalBetBlockComponent } from './template/total-bet-block/total-bet-blo
 import { SlidePlayersBlockComponent } from './template/slide-players-block/slide-players-block.component';
 import { PlayersTableBlockComponent } from './template/players-table-block/players-table-block.component';
 import { BetColumnComponent } from './template/players-table-block/bet-column/bet-column.component';
+import { FormsModule } from '@angular/forms';
+import { ModalTemplateComponent } from './template/modals/modal-template/modal-template.component';
+import { ModalDepositComponent } from './template/modals/modal-deposit/modal-deposit.component';
+import { ModalWithdrawComponent } from './template/modals/modal-withdraw/modal-withdraw.component';
+import { DiceBetBlockComponent } from './pages/dice-page/dice-bet-block/dice-bet-block.component';
+import { DiceTableBlockComponent } from './pages/dice-page/dice-table-block/dice-table-block.component';
+import { DiceInputComponent } from './pages/dice-page/dice-bet-block/dice-input/dice-input.component';
+import { ModalChestsComponent } from './template/modals/modal-chests/modal-chests.component';
+import { ModalTournamentsComponent } from './template/modals/modal-tournaments/modal-tournaments.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { ModalAttentionComponent } from './template/modals/modal-attention/modal-attention.component';
 
 @NgModule({
   declarations: [
@@ -43,8 +52,6 @@ import { BetColumnComponent } from './template/players-table-block/bet-column/be
     UserMsgComponent,
     RefSystemPageComponent,
     BonusPageComponent,
-    ChestsPageComponent,
-    TournamentPageComponent,
     RefLinkBlockComponent,
     RefTableComponent,
     AgreementPageComponent,
@@ -60,11 +67,22 @@ import { BetColumnComponent } from './template/players-table-block/bet-column/be
     TotalBetBlockComponent,
     SlidePlayersBlockComponent,
     PlayersTableBlockComponent,
-    BetColumnComponent
+    BetColumnComponent,
+    ModalTemplateComponent,
+    ModalDepositComponent,
+    ModalWithdrawComponent,
+    DiceBetBlockComponent,
+    DiceTableBlockComponent,
+    DiceInputComponent,
+    ModalChestsComponent,
+    ModalTournamentsComponent,
+    ProfilePageComponent,
+    ModalAttentionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

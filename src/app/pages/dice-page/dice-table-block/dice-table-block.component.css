@@ -1,0 +1,52 @@
+th {
+  text-align: left;
+  color: #BCBFD3;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 14px;
+  padding-bottom: 7px;
+}
+
+td {
+  padding: 10px 14px;
+}
+
+.image-mask {
+  background: url('../../../../assets/imgs/avatars/4.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+@media screen and (max-width: 500px) {
+  td h3 {
+    font-size: 14px;
+  }
+
+  td .coin {
+    width: 15px;
+  }
+
+  tr th:first-child {
+    width: 34%;
+  }
+
+  tr th {
+    width: 22%;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  tr th {
+    width: 35%;
+  }
+
+  tr th:last-child {
+    width: 30%;
+  }
+
+ th:first-child, td:first-child{
+   display: none;
+ }
+}

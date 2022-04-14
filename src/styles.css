@@ -12,7 +12,7 @@
   text-decoration: none;
   list-style: none;
   outline: none;
-  transition: 0.05s all;
+  /* transition: 0.05s all; */
 }
 
 html, body {
@@ -23,4 +23,21 @@ html, body {
 body {
   max-width: 1424px;
   margin: 0 auto;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #DFE3F9;
+  border-top: 6px solid white;
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 2px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #DFE3F9;
 }

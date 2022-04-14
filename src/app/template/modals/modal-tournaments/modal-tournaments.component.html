@@ -1,0 +1,196 @@
+<app-modal-template>
+    <div class="tournament-container w-[800px] pb-[7px]">
+        <div class="top-info flex items-center justify-between p-[20px]">
+            <h1 class="text-[18px] font-[600] mr-[15px]">Турнир</h1>
+            <div class="flex items-center">
+                <h2 class="timer font-[600] mr-[20px]">
+                    <span class="text-main-grey-250">Закончится:
+                    </span>20.02&nbsp;;&nbsp;23:30:00</h2>
+
+                <div class="balance flex items-center bg-[#F6AF4333] px-[20px] py-[11px] rounded-10">
+                    <p class="text-[14px] font-[600] text-main-yellow">Ваш счет:</p>
+                    <p class="flex items-center ml-[33px] text-[16px] font-[600]"><img class="mr-[8px]" src="/assets/svgs/coin.svg">9161</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="line w-full h-[1px] bg-main-grey-150"></div>
+
+        <div>
+          <div #leaders class="leaders grid grid-cols-3 w-full gap-[20px] p-[20px] pb-[6px]">
+            <div class="second-place w-full h-[311px] flex flex-col items-center p-[20px] bg-main-grey-default rounded-10">
+                <div class="image-mask relative w-[80px] h-[80px] rounded-6">
+                    <svg class="place-svg absolute" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.0674404 25.3421C0.134755 25.5964 0.251909 25.8347 0.412103 26.0434C0.572297 26.252 0.772341 26.4268 1.00062 26.5575L4.82347 28.7681V33.1714C4.82347 33.7024 5.03445 34.2118 5.41 34.5873C5.78555 34.9628 6.2949 35.1738 6.82601 35.1738H11.2296L13.4404 38.9983C13.7067 39.4574 14.1441 39.7923 14.6568 39.9296C15.1694 40.067 15.7157 39.9956 16.1759 39.7312L19.9987 37.5226L23.8236 39.7332C24.2837 39.9976 24.83 40.069 25.3426 39.9316C25.8553 39.7943 26.2927 39.4594 26.559 39.0003L28.7678 35.1778H33.1714C33.7025 35.1778 34.2119 34.9668 34.5874 34.5913C34.963 34.2158 35.1739 33.7065 35.1739 33.1754V28.7721L38.9968 26.5615C39.2247 26.4302 39.4245 26.2553 39.5847 26.0467C39.745 25.8381 39.8625 25.5999 39.9306 25.3459C39.9986 25.0918 40.0159 24.8268 39.9815 24.5661C39.947 24.3053 39.8615 24.0539 39.7297 23.8263L37.5209 20.0017L39.7317 16.1792C39.9973 15.7193 40.0692 15.1727 39.9318 14.6598C39.7943 14.1468 39.4587 13.7095 38.9988 13.4439L35.1759 11.2333V6.83004C35.1759 6.29897 34.965 5.78966 34.5894 5.41414C34.2139 5.03862 33.7045 4.82766 33.1734 4.82766H28.7698L26.561 1.00511C26.2949 0.545809 25.858 0.210379 25.3455 0.0719954C25.0915 0.00325633 24.8264 -0.0144398 24.5655 0.0199306C24.3046 0.0543009 24.0531 0.140056 23.8256 0.272234L19.9987 2.48086L16.1759 0.270231C15.9484 0.138145 15.697 0.0522647 15.4363 0.0175154C15.1755 -0.017234 14.9105 -0.000168353 14.6564 0.0677336C14.4022 0.135636 14.164 0.253038 13.9553 0.413207C13.7467 0.573376 13.5717 0.77316 13.4404 1.0011L11.2296 4.82565H6.82601C6.2949 4.82565 5.78555 5.03662 5.41 5.41214C5.03445 5.78766 4.82347 6.29697 4.82347 6.82804V11.2313L1.00062 13.4439C0.54144 13.7102 0.206615 14.1477 0.0695899 14.6604C-0.0674349 15.1732 0.00452911 15.7194 0.269697 16.1792L2.4785 20.0017L0.267695 23.8243C0.0031501 24.2839 -0.0688376 24.8295 0.0674404 25.3421Z" fill="url(#paint0_linear_124_145)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_124_145" x1="2.01166e-08" y1="11.5" x2="40" y2="34.5" gradientunits="userSpaceOnUse">
+                                <stop stop-color="#AEB9C4"/>
+                                <stop offset="1" stop-color="#808596"/>
+                            </linearGradient>
+                        </defs>
+
+                        <text x="15" y="25" fill="white" class="font-[600]">2</text>
+                    </svg>
+                </div>
+
+                <h1 class="title leading-none mt-[25px] text-[16px] font-[500] text-center">StepenWolf</h1>
+
+                <div class="played">
+                    <h3 class="text-[12px] text-main-grey-250 font-[600] text-center leading-none mt-[12px]">Наиграл</h3>
+                    <h1 class="played-coins font-[600] text-[18px] flex items-center leading-none mt-[7px]">
+                        <img class="mr-[6px]" src="/assets/svgs/coin.svg">
+                        17615.60
+                    </h1>
+                </div>
+
+                <button class="prize mt-[20px] px-[22px] pb-[20px] pt-[11px] rounded-10 bg-white">
+                    <h3 class="mb-[8px] text-center text-[12px] font-[600] text-main-yellow">Приз</h3>
+                    <h1 class="prize-coins flex items-center font-[700] text-[24px] text-main-yellow leading-none">
+                        <img class="mr-[7px]" src="/assets/svgs/coin.svg">
+                        15.000
+                    </h1>
+                </button>
+            </div>
+
+            <div class="first-place h-[333px] flex flex-col items-center p-[20px] w-full bg-main-grey-default rounded-10">
+                <div class="image-mask relative w-[100px] h-[100px] rounded-6">
+                    <svg class="place-svg absolute" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.0674404 25.3421C0.134755 25.5964 0.251909 25.8347 0.412103 26.0434C0.572297 26.252 0.772341 26.4268 1.00062 26.5575L4.82347 28.7681V33.1714C4.82347 33.7024 5.03445 34.2118 5.41 34.5873C5.78555 34.9628 6.2949 35.1738 6.82601 35.1738H11.2296L13.4404 38.9983C13.7067 39.4574 14.1441 39.7923 14.6568 39.9296C15.1694 40.067 15.7157 39.9956 16.1759 39.7312L19.9987 37.5226L23.8236 39.7332C24.2837 39.9976 24.83 40.069 25.3426 39.9316C25.8553 39.7943 26.2927 39.4594 26.559 39.0003L28.7678 35.1778H33.1714C33.7025 35.1778 34.2119 34.9668 34.5874 34.5913C34.963 34.2158 35.1739 33.7065 35.1739 33.1754V28.7721L38.9968 26.5615C39.2247 26.4302 39.4245 26.2553 39.5847 26.0467C39.745 25.8381 39.8625 25.5999 39.9306 25.3459C39.9986 25.0918 40.0159 24.8268 39.9815 24.5661C39.947 24.3053 39.8615 24.0539 39.7297 23.8263L37.5209 20.0017L39.7317 16.1792C39.9973 15.7193 40.0692 15.1727 39.9318 14.6598C39.7943 14.1468 39.4587 13.7095 38.9988 13.4439L35.1759 11.2333V6.83004C35.1759 6.29897 34.965 5.78966 34.5894 5.41414C34.2139 5.03862 33.7045 4.82766 33.1734 4.82766H28.7698L26.561 1.00511C26.2949 0.545809 25.858 0.210379 25.3455 0.0719954C25.0915 0.00325633 24.8264 -0.0144398 24.5655 0.0199306C24.3046 0.0543009 24.0531 0.140056 23.8256 0.272234L19.9987 2.48086L16.1759 0.270231C15.9484 0.138145 15.697 0.0522647 15.4363 0.0175154C15.1755 -0.017234 14.9105 -0.000168353 14.6564 0.0677336C14.4022 0.135636 14.164 0.253038 13.9553 0.413207C13.7467 0.573376 13.5717 0.77316 13.4404 1.0011L11.2296 4.82565H6.82601C6.2949 4.82565 5.78555 5.03662 5.41 5.41214C5.03445 5.78766 4.82347 6.29697 4.82347 6.82804V11.2313L1.00062 13.4439C0.54144 13.7102 0.206615 14.1477 0.0695899 14.6604C-0.0674349 15.1732 0.00452911 15.7194 0.269697 16.1792L2.4785 20.0017L0.267695 23.8243C0.0031501 24.2839 -0.0688376 24.8295 0.0674404 25.3421Z" fill="#FECF57"/>
+                        <text x="15" y="25" fill="white" class="font-[600]">1</text>
+                    </svg>
+                </div>
+
+                <h1 class="title leading-none mt-[25px] text-[16px] font-[500] text-center">StepenWolf</h1>
+
+                <div class="played">
+                    <h3 class="text-[12px] text-main-grey-250 font-[600] text-center leading-none mt-[12px]">Наиграл</h3>
+                    <h1 class="played-coins font-[600] text-[18px] flex items-center leading-none mt-[7px]">
+                        <img class="mr-[6px]" src="/assets/svgs/coin.svg">
+                        216115.17
+                    </h1>
+                </div>
+
+                <button class="prize mt-[22px] px-[22px] pb-[20px] pt-[11px] rounded-10 bg-white">
+                    <h3 class="mb-[8px] text-center text-[12px] font-[600] text-main-yellow">Приз</h3>
+                    <h1 class="prize-coins flex items-center font-[700] text-[24px] text-main-yellow leading-none">
+                        <img class="mr-[7px]" src="/assets/svgs/coin.svg">
+                        70.000
+                    </h1>
+                </button>
+            </div>
+
+            <div class="third-place h-[311px] flex flex-col items-center p-[20px] w-full bg-main-grey-default rounded-10">
+                <div class="image-mask relative w-[80px] h-[80px] rounded-6">
+
+                    <svg class="place-svg absolute" width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.0674404 25.3421C0.134755 25.5964 0.251909 25.8347 0.412103 26.0434C0.572297 26.252 0.772341 26.4268 1.00062 26.5575L4.82347 28.7681V33.1714C4.82347 33.7024 5.03445 34.2118 5.41 34.5873C5.78555 34.9628 6.2949 35.1738 6.82601 35.1738H11.2296L13.4404 38.9983C13.7067 39.4574 14.1441 39.7923 14.6568 39.9296C15.1694 40.067 15.7157 39.9956 16.1759 39.7312L19.9987 37.5226L23.8236 39.7332C24.2837 39.9976 24.83 40.069 25.3426 39.9316C25.8553 39.7943 26.2927 39.4594 26.559 39.0003L28.7678 35.1778H33.1714C33.7025 35.1778 34.2119 34.9668 34.5874 34.5913C34.963 34.2158 35.1739 33.7065 35.1739 33.1754V28.7721L38.9968 26.5615C39.2247 26.4302 39.4245 26.2553 39.5847 26.0467C39.745 25.8381 39.8625 25.5999 39.9306 25.3459C39.9986 25.0918 40.0159 24.8268 39.9815 24.5661C39.947 24.3053 39.8615 24.0539 39.7297 23.8263L37.5209 20.0017L39.7317 16.1792C39.9973 15.7193 40.0692 15.1727 39.9318 14.6598C39.7943 14.1468 39.4587 13.7095 38.9988 13.4439L35.1759 11.2333V6.83004C35.1759 6.29897 34.965 5.78966 34.5894 5.41414C34.2139 5.03862 33.7045 4.82766 33.1734 4.82766H28.7698L26.561 1.00511C26.2949 0.545809 25.858 0.210379 25.3455 0.0719954C25.0915 0.00325633 24.8264 -0.0144398 24.5655 0.0199306C24.3046 0.0543009 24.0531 0.140056 23.8256 0.272234L19.9987 2.48086L16.1759 0.270231C15.9484 0.138145 15.697 0.0522647 15.4363 0.0175154C15.1755 -0.017234 14.9105 -0.000168353 14.6564 0.0677336C14.4022 0.135636 14.164 0.253038 13.9553 0.413207C13.7467 0.573376 13.5717 0.77316 13.4404 1.0011L11.2296 4.82565H6.82601C6.2949 4.82565 5.78555 5.03662 5.41 5.41214C5.03445 5.78766 4.82347 6.29697 4.82347 6.82804V11.2313L1.00062 13.4439C0.54144 13.7102 0.206615 14.1477 0.0695899 14.6604C-0.0674349 15.1732 0.00452911 15.7194 0.269697 16.1792L2.4785 20.0017L0.267695 23.8243C0.0031501 24.2839 -0.0688376 24.8295 0.0674404 25.3421Z" fill="url(#paint0_linear_124_170)"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_124_170" x1="2.01166e-08" y1="11.5" x2="40" y2="34.5" gradientunits="userSpaceOnUse">
+                                <stop offset="5%" stop-color="#7C6C54"/>
+                                <stop offset="95%" stop-color="#FABE64"/>
+                            </linearGradient>
+                        </defs>
+
+                        <text x="15" y="25" fill="white" class="font-[600]">3</text>
+                    </svg>
+
+                </div>
+
+                <h1 class="title leading-none mt-[25px] text-[16px] font-[500] text-center">StepenWolf</h1>
+
+                <div class="played">
+                    <h3 class="text-[12px] text-main-grey-250 font-[600] text-center leading-none mt-[12px]">Наиграл</h3>
+                    <h1 class="played-coins font-[600] text-[18px] flex items-center leading-none mt-[7px]">
+                        <img class="mr-[6px]" src="/assets/svgs/coin.svg">
+                        14226
+                    </h1>
+                </div>
+
+                <button class="prize mt-[20px] px-[22px] pb-[20px] pt-[11px] rounded-10 bg-white">
+                    <h3 class="mb-[8px] text-center text-[12px] font-[600] text-main-yellow">Приз</h3>
+                    <h1 class="prize-coins flex items-center font-[700] text-[24px] text-main-yellow leading-none">
+                        <img class="mr-[7px]" src="/assets/svgs/coin.svg">
+                        15.000
+                    </h1>
+                </button>
+            </div>
+        </div>
+        </div>
+
+        <table class="w-full">
+            <tr>
+                <th class="text-left w-[20%] p-[20px]">Место</th>
+                <th class="text-left w-[55%] p-[20px]">Игрок</th>
+                <th class="text-left w-[25%] p-[20px]">Наиграно</th>
+            </tr>
+
+            <tr class="border-b border-main-grey-150">
+                <td class="px-[20px] text-[16px] font-[500] text-main-grey-350">4</td>
+                <td class="px-[20px">
+                    <div class="flex items-center">
+                        <div class="image-mask w-[40px] h-[40px] rounded-6 bg-main-grey-50 mr-[10px]"></div>
+                        <h1 class="text-[16px] font-[500] text-main-grey-450">Манящий</h1>
+                    </div>
+                </td>
+
+                <td class="px-[20px]">
+                    <div class="flex items-center">
+                        <img class="mr-[10px]" src="/assets/svgs/coin.svg">
+                        <h1 class="text-[16px] font-[500]">9161</h1>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="border-b border-main-grey-150">
+                <td class="px-[20px] text-[16px] font-[500] text-main-grey-350">5</td>
+                <td class="px-[20px">
+                    <div class="flex items-center">
+                        <div class="image-mask w-[40px] h-[40px] rounded-6 bg-main-grey-50 mr-[10px]"></div>
+                        <h1 class="text-[16px] font-[500] text-main-grey-450">Проминанце</h1>
+                    </div>
+                </td>
+
+                <td class="px-[20px]">
+                    <div class="flex items-center">
+                        <img class="mr-[10px]" src="/assets/svgs/coin.svg">
+                        <h1 class="text-[16px] font-[500]">7562</h1>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="border-b border-main-grey-150">
+                <td class="px-[20px] text-[16px] font-[500] text-main-grey-350">6</td>
+                <td class="px-[20px">
+                    <div class="flex items-center">
+                        <div class="image-mask w-[40px] h-[40px] rounded-6 bg-main-grey-50 mr-[10px]"></div>
+                        <h1 class="text-[16px] font-[500] text-main-grey-450">Temkin</h1>
+                    </div>
+                </td>
+
+                <td class="px-[20px]">
+                    <div class="flex items-center">
+                        <img class="mr-[10px]" src="/assets/svgs/coin.svg">
+                        <h1 class="text-[16px] font-[500]">5362</h1>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="px-[20px] text-[16px] font-[500] text-main-grey-350">7</td>
+                <td class="px-[20px">
+                    <div class="flex items-center">
+                        <div class="image-mask w-[40px] h-[40px] rounded-6 bg-main-grey-50 mr-[10px]"></div>
+                        <h1 class="text-[16px] font-[500] text-main-grey-450">Katana78rus</h1>
+                    </div>
+                </td>
+
+                <td class="px-[20px]">
+                    <div class="flex items-center">
+                        <img class="mr-[10px]" src="/assets/svgs/coin.svg">
+                        <h1 class="text-[16px] font-[500]">4586</h1>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</app-modal-template>

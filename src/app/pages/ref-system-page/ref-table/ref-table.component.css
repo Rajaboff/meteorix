@@ -1,0 +1,25 @@
+@media screen and (max-width: 500px) {
+  td h3, td span, td p {
+    font-size: 14px;
+  }
+
+  .coin {
+    width: 15px;
+  }
+
+  .player h3 {
+    display: none;
+  }
+
+  td {
+    width: 37%;
+  }
+
+  td:nth-child(2) {
+    min-width: 121px;
+  }
+
+  td:first-child {
+   width: 26%;
+  }
+}

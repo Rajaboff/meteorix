@@ -3,7 +3,7 @@
   <div class="procentage-block w-full rounded-10 bg-main-grey-50 flex justify-center p-[5px]">
     <div *ngFor="let player of players" class="player-procentage w-[60px] h-[60px] rounded-6 bg-white mx-[3px] relative bg-no-repeat bg-cover bg-center" [style.backgroundImage]="setImgUrl(player.imgPath)">
       <div class="absolute bottom-0 w-full rounded-6 p-[3px]">
-        <p class="text-center text-[12px] text-white">{{ player.bet / playerData.totalBetSum * 100 | number:'1.0-0' }}%</p>
+        <p class="text-center text-[12px] text-white">{{ player.bet / totalBet * 100 | number:'1.0-0' }}%</p>
       </div>
     </div>
   </div>

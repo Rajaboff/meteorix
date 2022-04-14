@@ -1,0 +1,81 @@
+.image-mask {
+  background-size: cover;
+  background-position: center;
+}
+
+.second-place > .image-mask {
+  background-image: url('/assets/imgs/avatars/2.jpg');
+}
+.first-place > .image-mask {
+  background-image: url('/assets/imgs/avatars/1.jpg');
+}
+.third-place > .image-mask {
+  background-image: url('/assets/imgs/avatars/3.jpg');
+}
+
+.place-svg {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+}
+
+th {
+  font-size: 12px;
+  font-weight: 500;
+  color: #BCBFD3;
+}
+
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+td > div > .image-mask {
+  background-image: url('/assets/imgs/avatars/4.jpg');
+}
+
+@media screen and (max-width: 510px) {
+  .tournament-container {
+    width: 400px;
+  }
+
+  .leaders {
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-x: auto;
+    grid-template-columns: 200px 200px 200px;
+  }
+
+  .leaders > div {
+    padding: 15px; 
+  }
+
+  .first-place {
+    height: 100%;
+  }
+
+  .second-place, .third-place {
+    height: 95%;
+  }
+
+  .balance p:first-child {
+    display: none;
+  }
+
+  .balance p {
+    margin: 0;
+  }
+
+  .timer {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .tournament-containe {
+    width: 300px;
+  }
+}

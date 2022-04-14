@@ -17,3 +17,11 @@ button.active path, button:hover path {
     opacity: 0.5;
 }
 
+.emoji-block::-webkit-scrollbar {
+ height: 3px;
+}
+
+.emoji-block::-webkit-scrollbar-thumb {
+  border-top: 5px;
+}
+

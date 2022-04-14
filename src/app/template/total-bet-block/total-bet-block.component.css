@@ -20,3 +20,77 @@ input[type=number] {
 .back-colorize{
   transition: 0.7s;
 }
+
+@media screen and (max-width: 1250px) {
+  .bet-title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1100px)  {
+  .bank-title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px)  {
+  .bank-title, .bet-title {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 700px)  {
+  .bank-title, .bet-title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px)  {
+  .bank-title, .bet-title {
+    display: block;
+  }
+
+  .bet-input {
+    width: 100px;
+  }
+
+  .bet-info {
+    flex-direction: column;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .betting{
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bet-title {
+    display: none;
+  }
+
+  .total-info {
+    flex-direction: column;
+  }
+
+  .total-info > .timer {
+    margin-top: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .total-info > .timer > div {
+    height: 70px;
+    margin-left: 0;
+    
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bank-title {
+    display: none;
+  }
+}

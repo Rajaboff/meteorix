@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { PlayersClassic } from 'src/app/models/players-classic';
 import { PlayersDataService } from 'src/app/services/players-data.service';
 
@@ -13,6 +13,8 @@ export class SlidePlayersBlockComponent implements OnInit {
   positions = Array(100);
   iMin = 0;
 
+  @Output() resetSeconds = new EventEmitter();
+
   curImgPush = 0;
 
   winner: PlayersClassic = {
@@ -25,14 +27,13 @@ export class SlidePlayersBlockComponent implements OnInit {
 
   winTicket = 0;
 
-  totalBet = 0;
+  @Input() totalBet = 0;
+  @Input() maxBet = 0;
 
   @ViewChild('imgsCont') imageContainer: ElementRef | any;
   @ViewChild('slider') slider: ElementRef | any;
 
-  constructor(private playersData: PlayersDataService) {
-    this.totalBet = this.playersData.totalBetSum;
-  }
+  constructor(private playersData: PlayersDataService) {}
 
   ngOnInit(): void {
 
@@ -57,8 +58,7 @@ export class SlidePlayersBlockComponent implements OnInit {
       
       let middlePos = randNum + this.slider.nativeElement.offsetWidth * 0.5;
       let winPos = this.positions.filter(a => a.from <= middlePos && a.to >= middlePos)[0]
-      // console.log(this.images[tst.id], randNum, tst, );
-      
+
       setTimeout(() => {
         this.winner = this.playersData.testPlayersData.filter(p => p.imgPath === this.images[winPos.id])[0];
         this.winTicket = Math.floor(Math.random() * (this.winner.ticketMax - this.winner.ticketMin) + this.winner.ticketMin);

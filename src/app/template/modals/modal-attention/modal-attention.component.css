@@ -1,0 +1,5 @@
+@media screen and (max-width: 510px) {
+  .modal-attention-container {
+    width: 400px;
+  }
+}

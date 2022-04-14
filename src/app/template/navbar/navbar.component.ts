@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalsService } from 'src/app/services/modals.service';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
@@ -8,9 +9,9 @@ import { NavigationService } from 'src/app/services/navigation.service';
 })
 export class NavbarComponent implements OnInit {
 
-  logged = true;
+  logged = false;
 
-  constructor(private navigationService: NavigationService) { }
+  constructor(private navigationService: NavigationService, public modalsService: ModalsService) { }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,10 @@
+<div class="dice-input-container rounded-10 border border-main-grey-150 mr-[10px]">
+  <h1 class="text-[14px] font-[500] text-main-grey-350 m-[10px] mb-0">{{ title }}</h1>
+  <input type="number" [min]="minVal" [max]="maxVal" #input [(ngModel)]="val" (ngModelChange)="valEmit()" (change)="checkingValue()" placeholder="0" class="placeholder:text-main-grey-250 text-main-grey-250 pb-[17px] pt-[5px] px-[10px] leading-none text-center w-[200px] text-[30px] font-[700]">
+  <div class="btns grid grid-cols-4 w-full">
+    <button class="text-[14px] font-[500] text-main-grey-400 border-r border-t border-main-grey-150 py-[10px]" (click)="minimalVal()">MIN</button>
+    <button class="text-[14px] font-[500] text-main-grey-400 border-r border-t border-main-grey-150 py-[10px]" (click)="maximalVal()">MAX</button>
+    <button class="text-[14px] font-[500] text-main-grey-400 border-r border-t border-main-grey-150 py-[10px]" (click)="doubleVal()">X2</button>
+    <button class="text-[14px] font-[500] text-main-grey-400 border-t border-main-grey-150 py-[10px]" (click)="divideVal()">/2</button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.pay-system {
+  cursor: pointer;
+}
+
+.pay-system.active {
+  background-color: #56C72C33;
+  border: 2px solid #56C72C;
+}
+
+.activate-promo-info.activated{
+  background-color: #F6AF43;
+}

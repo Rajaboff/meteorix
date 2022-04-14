@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ModalsService } from 'src/app/services/modals.service';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
@@ -8,7 +9,9 @@ import { NavigationService } from 'src/app/services/navigation.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private navigationService: NavigationService) { }
+  @Output() close = new EventEmitter();
+
+  constructor(private navigationService: NavigationService, public modalsService: ModalsService) { }
 
   ngOnInit(): void {
   }

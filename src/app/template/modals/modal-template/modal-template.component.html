@@ -1,0 +1,7 @@
+<div class="modal-template-container w-full h-full fixed top-0 left-0 z-50">
+    <div class="modal-content fixed rounded-10 bg-white z-20">
+      <ng-content></ng-content>
+    </div>
+
+    <div (click)="modalsService.modalToggle('')" class="modal-bg fixed w-full h-full cursor-pointer"></div>
+</div>

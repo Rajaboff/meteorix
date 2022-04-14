@@ -1,0 +1,29 @@
+<div class="dice-bet-container px-[14px] py-[20px] flex">
+  <div class="left-side w-full">
+    <div class="inputs flex">
+      <app-dice-input title="Сумма:" inpCheck="bet" [minVal]="5" [maxVal]="100000" (values)="betting($event)"></app-dice-input>
+      <app-dice-input title="Шанс:" inpCheck="chance" [minVal]="10" [maxVal]="90" (values)="chancing($event)"></app-dice-input>
+    </div>
+
+    <div class="hash text-[12px] mt-[20px] font-[500] text-main-grey-250"><span class="text-main-grey-400">Хэш игры</span>
+      : 1e47698bc3d6904105c1d8f89b8a65f84cbb2ef7ef6fd7dd08dfd29b9c6e5e55a7225d9cd0fc3a2443a54a73d64f9b0fe0fe9c330ae5f345bcd858ed82182768</div>
+  </div>
+
+  <div class="right-side w-full">
+    <h1 class="text-[48px] font-[700] text-center" *ngIf="!diceService.randNum">{{ diceService.coef | number: '1.0-2' }}</h1>
+    <h1 class="rand-numbers text-[48px] font-[700] text-center" [ngClass]="{'win': diceService.win, 'lose': !diceService.win}" *ngIf="diceService.randNum">{{ diceService.randNum }}</h1>
+    <p class="text-[14px] font-[500] text-main-grey-350 text-center">{{ diceService.info }}</p>
+
+    <div class="btns flex mt-[23px]">
+      <div class="less-btn w-full pr-[3px]">
+        <p class="text-[14px] font-[500] leading-none mb-[8px] text-main-grey-350 text-center">0-{{ diceService.lessThan | number: '1.0-0' }}</p>
+        <button class="w-full p-[11px] bg-main-grey-default text-[14px] font-[500] text-main-grey-400 rounded-10" (click)="diceService.randomNum('less')">Меньше</button>
+      </div>
+
+      <div class="more-btn w-full pl-[3px]">
+        <p class="text-[14px] font-[500] leading-none mb-[8px] text-main-grey-350 text-center">{{ (diceService.moreThan | number: '1.0-0') + '-' + (diceService.maxNum - 1) }}</p>
+        <button class="w-full p-[11px] bg-main-grey-default text-[14px] font-[500] text-main-grey-400 rounded-10" (click)="diceService.randomNum('more')">Больше</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,25 +10,25 @@
 
     <div class="bet-info flex justify-between items-center rounded-10 border border-r-main-grey-150 pl-[20px] pr-[5px] py-[5px] mt-[10px]">
         <div class="limits flex items-center">
-            <span class="text-[18px] font-[600] text-main-grey-250 mr-[10px] mb-[2px]">Банк:</span>
+            <span class="bank-title text-[18px] font-[600] text-main-grey-250 mr-[10px] mb-[2px]">Банк:</span>
             <span class="flex leading-none items-center text-[18px] font-[600]"><img class="w-[14px] mr-[10px]" src="/assets/svgs/coin.svg">
-                500</span>
+                {{ maxBet }}</span>
 
             <div class="circle w-[6px] h-[6px] rounded-10 bg-main-grey-default mx-[20px]"></div>
 
-            <span class="text-[18px] font-[600] text-main-grey-250 mr-[10px] mb-[2px]">Билет:</span>
-            <span class="flex leading-none items-center text-[14px] font-[600] text-main-grey-250">
+            <span class="tickets-title text-[18px] font-[600] text-main-grey-250 mr-[10px] mb-[2px]">Билет:</span>
+            <span class="ticket-sum flex leading-none items-center text-[14px] font-[600] text-main-grey-250">
                 <img class="w-[17px] mr-[10px]" src="/assets/svgs/ticket.svg">
                 {{ winTicket }}</span>
 
             <div class="circle w-[6px] h-[6px] rounded-10 bg-main-grey-default mx-[20px]"></div>
 
-            <span class="text-[18px] font-[600] text-main-grey-250 mr-[10px] mb-[2px]">Шанс:</span>
-            <span class="flex leading-none items-center text-[14px] font-[600]">{{ (winner.bet || 0) / totalBet * 100 | number: '1.0-0'}}%</span>
+            <span class="chance-title text-[18px] font-[600] text-main-grey-250 mr-[10px] mb-[2px]">Шанс:</span>
+            <span class="chance-sum flex leading-none items-center text-[14px] font-[600]">{{ (winner.bet || 0) / totalBet * 100 | number: '1.0-0'}}%</span>
         </div>
 
-        <div class="winner p-[5px] bg-[#F6AF4333] rounded-10 flex items-center text-[16px] font-[500]">
-          <div class="image-mask w-[40px] h-[40px] rounded-6 bg-center bg-cover bg-white" [style.backgroundImage]="setUrl(winner.imgPath)"></div>
-          <h1 class="ml-[10px] mr-[5px]">{{ winner.name || '???' }}</h1>
+        <div class="winner-tile ml-[10px] winner p-[5px] bg-[#F6AF4333] rounded-10 flex items-center text-[16px] font-[500]">
+          <div class="image-mask min-w-[40px] min-h-[40px] rounded-6 bg-center bg-cover bg-white" [style.backgroundImage]="setUrl(winner.imgPath)"></div>
+          <h1 class="winner-name ml-[10px] mr-[5px]">{{ winner.name || '???' }}</h1>
         </div>
     </div>

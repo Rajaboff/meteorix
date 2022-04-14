@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalsService } from './services/modals.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   menuTab: boolean = false;
   chatTab: boolean = false;
+
+  constructor(public modalsService: ModalsService) { }
 
   menuOpen() {
     this.menuTab = !this.menuTab;
