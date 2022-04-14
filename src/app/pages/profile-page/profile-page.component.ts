@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePageComponent implements OnInit {
 
+  game: string = 'Dice';
+
   constructor() { }
 
   ngOnInit(): void {

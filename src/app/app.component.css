@@ -33,18 +33,11 @@
   }
 
   .menu-toggle {
-    transition: left 0.2s;
     display: block;
   }
 
   .menu.opened {
     left: 0px;
-
-  }
-
-  .menu-toggle.opened {
-    left: 250px;
-    z-index: 100;
   }
 
   /* ----------- */
@@ -64,13 +57,7 @@
   }
 
   .chat-toggle {
-    transition: right 0.2s;
     display: block;
-  }
-
-  .chat-toggle.opened {
-    right: 300px;
-    z-index: 100;
   }
 }
 
@@ -87,12 +74,10 @@
   .right-block {
     right: calc(-100% - 55px);
   }
-
-  .chat-toggle.opened {
-    right: calc(100% - 55px);
-  }
-
-  .menu-toggle.opened {
-    left: calc(100% - 55px);
-  }
 } 
+
+@media screen and (max-width: 400px) {
+  .menu-toggle {
+    padding: 18px;
+  }
+}

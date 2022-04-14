@@ -4,6 +4,10 @@
   background-position: center;
 }
 
+.stats-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 1150px) {
   .logo-block {
     min-width: 215px;
@@ -15,24 +19,109 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .auth-block, .profile-block {
+  .auth-block{
     min-width: 150px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .profile-block {
+    min-width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .profile-block .image-mask {
+    width: 49px;
+    height: 49px;
   }
 
   .profile-block > .info > span,
   .profile-block > .btns > .history,
-  .auth-block > span,
-  .logo-block {
+  .auth-block > span {
     display: none;
+  }
+
+  .logo-block {
+    width: 100%;
+    height: auto;
+    padding-left: 70px;
+  }
+
+  .logo-block > img {
+    padding-bottom: 4px;
+  }
+
+  .stats {
+    display: none;
+  }
+
+  .stats-mobile {
+    display: flex;
+  }
+
+  .stats-mobile > div {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
 @media screen and (max-width: 800px) {
-  h1, .wins-block > div > span {
+  h1, .wins-block span {
     font-size: 20px;
+  }
+
+  .wins-block {
+    min-width: 180px;
   }
 
   p {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo-block > img {
+    width: 120px;
+  }
+
+  .logo-block {
+    padding-left: 60px;
+  }
+
+  .profile-block .image-mask {
+    width: 40px;
+    height: 40px;
+  }
+
+  .profile-block {
+    min-width: auto;
+    padding: 10px;
+  }
+
+  .auth-block {
+    min-width: 80px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  .stats-mobile > div {
+    min-width: 70px;
+  }
+
+  .stats-mobile > .wins-block {
+    min-width: 130px;
+  }
+
+  .stats-mobile h1, .stats-mobile span {
+    font-size: 16px;
+  }
+
+  .stats-mobile p {
+    font-size: 12px;
+  }
+
+  .stats-mobile img {
+    width: 14px;
   }
 }

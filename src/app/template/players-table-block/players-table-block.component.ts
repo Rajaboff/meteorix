@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PlayersClassic } from 'src/app/models/players-classic';
-import { PlayersDataService } from 'src/app/services/players-data.service';
 
 @Component({
   selector: 'app-players-table-block',

@@ -9,3 +9,31 @@
 .btns > button:hover {
   border: 2px solid #F6AF43;
 }
+
+@media screen and (max-width: 800px) {
+  .games-block h1, .wins-block span {
+    font-size: 18px;
+  }
+
+  .games-block p, .wins-block p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .profile-main-info {
+    flex-wrap: wrap;
+  }
+
+  .stats {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+ .username-td{
+   display: none;
+ }
+}

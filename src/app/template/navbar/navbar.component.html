@@ -1,5 +1,4 @@
-<div
-    class="navbar-container w-full flex border-b border-main-grey-150">
+<div class="navbar-container w-full flex border-b border-main-grey-150">
 
     <!-- Logo block -->
     <div class="logo-block flex justify-center min-w-[255px] items-center h-[79px] border-r border-main-grey-150 pb-[2px]">
@@ -39,9 +38,9 @@
     </div>
 
     <!-- Profile block -->
-    <div *ngIf="logged" class="border-l border-main-grey-150 profile-block flex justify-between items-center py-[14px] px-[20px] min-w-[375px]">
+    <div *ngIf="logged" class="profile-block flex justify-between items-center py-[14px] px-[20px] min-w-[375px]">
         <div class="info flex items-center">
-            <div class="image-mask w-[50px] h-[50px] rounded-8 bg-main-grey-50 mr-[10px]"></div>
+            <div routerLink="/profile" class="image-mask w-[50px] h-[50px] rounded-8 bg-main-grey-50 mr-[10px]"></div>
             <span class="text-[14px] font-[700]">Монголойд</span>
         </div>
         <div class="btns flex items-center">
@@ -58,6 +57,30 @@
             </button>
         </div>
     </div>
+</div>
+
+<div class="stats-mobile w-full flex border-b border-main-grey-150">
+  <!-- Online block -->
+  <div class="online-block border-r border-main-grey-150 flex flex-col justify-center items-center w-full min-w-[100px]">
+      <h1 class="text-main-green-default text-[24px] font-[700] text-center leading-none pt-[5px]">182</h1>
+      <p class="text-main-grey-250 text-[16px] font-[500] text-center">Онлайн</p>
+  </div>
+
+  <!-- Games block -->
+  <div class="games-block border-r border-main-grey-150 flex flex-col justify-center items-center w-full min-w-[125px]">
+      <h1 class="text-main-grey-250 text-[24px] font-[700] text-center leading-none pt-[5px]">2053</h1>
+      <p class="text-main-grey-250 text-[16px] font-[500] text-center">Сегодня игр</p>
+  </div>
+
+  <!-- Wins block -->
+  <div class="wins-block flex flex-col justify-center items-center w-full min-w-[150px]">
+      <div class="flex justify-center items-center pt-[5px]">
+          <img class="mr-[8px]" src="/assets/svgs/coin.svg">
+          <span class="text-[24px] font-[700] leading-none">74, 035</span>
+          <span class="text-main-grey-250 text-[24px] font-[700] leading-none">.60</span>
+      </div>
+      <p class="text-main-grey-250 text-[16px] font-[500] text-center">Выиграно сегодня</p>
+  </div>
 </div>
 
 <app-modal-attention *ngIf="modalsService.modals.attention"></app-modal-attention>
